@@ -1,0 +1,5 @@
+*.env
+designs/*
+colors-typography/*
+page-one-copy.md
+page-two-copy.md
