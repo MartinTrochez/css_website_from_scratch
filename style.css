@@ -109,11 +109,19 @@
   :root {
     --clr-white: hsl(0, 0%, 100%);
     --clr-gray-100: hsl(0, 2%, 79%);
+
     --clr-brand-400: hsl(25, 88%, 75%);
     --clr-brand-500: hsl(25, 88%, 66%);
+
+    --clr-green-300: hsl(143, 19%, 69%);
     --clr-green-400: hsl(143, 19%, 49%);
     --clr-green-500: hsl(143, 38%, 37%);
     --clr-green-600: hsl(145, 29%, 19%);
+
+    --clr-brown-100: hsl(10, 5%, 90%);
+    --clr-brown-200: hsl(9, 7%, 85%);
+    --clr-brown-300: hsl(9, 8%, 75%);
+    --clr-brown-400: hsl(0, 6%, 60%);
     --clr-brown-500: hsl(10, 5%, 25%);
     --clr-brown-600: hsl(9, 7%, 21%);
     --clr-brown-700: hsl(9, 8%, 16%);
@@ -178,6 +186,18 @@
     --border-radius-1: 0.25rem;
     --border-radius-2: 0.5rem;
     --border-radius-3: 0.75rem;
+
+    @media (prefers-color-scheme: light) {
+      --text-main: var(--clr-brown-700);
+      --text-high-contrast: var(--clr-brown-900);
+      
+      --background-accent-dark: var(--clr-green-300);
+      --background-extra-light: var(--clr-brown-100);
+      --background-light: var(--clr-brown-200);
+      --background-main: var(--clr-brown-300);
+      --background-dark: var(--clr-brown-400);
+      --background-extra-dark: var(--clr-brown-500);
+    }
   }
 
   html {
@@ -467,7 +487,7 @@
   .hero {
     text-align: center;
     font-size: var(--font-size-md);
-    color: var(--text-high-contrast);
+    color: light-dark(var(--clr-brown-100), var(--text-high-contrast));
     background-image: url("assets/hero.webp");
     background-size: cover;
     background-position: center;
